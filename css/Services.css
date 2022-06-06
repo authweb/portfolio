@@ -1,0 +1,66 @@
+.services {
+  background-color: var(--various-bg);
+  border-radius: 0 0 2rem 2rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
+}
+.services:hover {
+  background-color: transparent;
+  cursor: default;
+}
+.services__head {
+  background-color: var(--primary-color);
+  padding: 2rem;
+  border-radius: 0 0 2rem 2rem;
+  -webkit-box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+}
+.services__head h3 {
+  color: var(--various-bg);
+  font-size: 1rem;
+  text-align: center;
+}
+.services__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+.services__list {
+  padding: 2rem;
+}
+.services__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+.services__list-icon {
+  color: var(--primary-color);
+  margin-top: 2px;
+}
+.services__list p {
+  font-size: 0.9rem;
+}
+
+/* ================ MEDIA QUERIES (Medium Devices) ================== */
+@media screen and (max-width: 1024px) {
+  .services {
+    height: auto;
+  }
+  .services__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+/* ================ MEDIA QUERIES (Small Devices) ================== */
+@media screen and (max-width: 600px) {
+  .services__container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
